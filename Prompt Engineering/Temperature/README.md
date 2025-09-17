@@ -234,75 +234,99 @@ Perfect — I’ll create the **full README.md** with all 50 MCQs, correct answe
 
 ---
 
+Perfect — I’ll polish your **README.md** so it looks clean, professional, and attractive. I’ll improve:
+
+* Proper **spacing & indentation**
+* Consistent **options alignment (a), b), c), d))**
+* Clear separation between **questions and answers**
+* Headings and sections visually neat
+
+Here’s the refined version:
+
+---
+
 # Temperature in LLMs – 50 MCQs with Answers & Explanations
+
+---
 
 ## Basics
 
-1. Temperature in LLMs controls:
-   a) Speed
-   **b) Randomness (Because temperature adjusts how randomly tokens are chosen during generation.)**
-   c) Accuracy
-   d) Memory
+**1. Temperature in LLMs controls:**
 
-2. A temperature of 0 means:
-   a) Always random
-   **b) Deterministic (Because at T=0, the model always picks the highest probability token.)**
-   c) Creative
-   d) Nonsense
+* a) Speed
+* **b) Randomness (Because temperature adjusts how randomly tokens are chosen during generation.)**
+* c) Accuracy
+* d) Memory
 
-3. Temperature modifies:
-   a) User prompt
-   **b) Token logits (Because logits are divided by T before softmax to adjust probability spread.)**
-   c) Training data
-   d) Context window
+**2. A temperature of 0 means:**
 
-4. Which formula includes temperature?
-   **a) P = exp(logit/T)/Σexp(logit/T) (This is the softmax with temperature scaling.)**
-   b) P = logit × T
-   c) P = logit + T
-   d) None
+* a) Always random
+* **b) Deterministic (Because at T=0, the model always picks the highest probability token.)**
+* c) Creative
+* d) Nonsense
 
-5. Higher temperature makes the distribution:
-   a) Sharper
-   **b) Flatter (Because probabilities spread out, making rare tokens more likely.)**
-   c) Narrower
-   d) More peaked
+**3. Temperature modifies:**
+
+* a) User prompt
+* **b) Token logits (Because logits are divided by T before softmax to adjust probability spread.)**
+* c) Training data
+* d) Context window
+
+**4. Which formula includes temperature?**
+
+* **a) P = exp(logit/T) / Σ exp(logit/T) (This is the softmax with temperature scaling.)**
+* b) P = logit × T
+* c) P = logit + T
+* d) None
+
+**5. Higher temperature makes the distribution:**
+
+* a) Sharper
+* **b) Flatter (Because probabilities spread out, making rare tokens more likely.)**
+* c) Narrower
+* d) More peaked
 
 ---
 
 ## Practical Ranges
 
-6. Best range for deterministic factual answers:
-   **a) 0.0–0.3 (Low T keeps answers consistent and factual.)**
-   b) 0.5–0.7
-   c) 0.8–1.0
-   d) >1.5
+**6. Best range for deterministic factual answers:**
 
-7. Best range for story generation:
-   a) 0.0–0.2
-   b) 0.4–0.7
-   **c) 0.8–1.2 (Higher T encourages creativity and variation in storytelling.)**
-   d) >2.0
+* **a) 0.0–0.3 (Low T keeps answers consistent and factual.)**
+* b) 0.5–0.7
+* c) 0.8–1.0
+* d) >1.5
 
-8. What happens at very high T (>2)?
-   a) Outputs coherent always
-   **b) Outputs more random, often nonsense (Very high T makes output unstable and meaningless.)**
-   c) Outputs deterministic
-   d) Output length decreases
+**7. Best range for story generation:**
 
-9. A chatbot in healthcare should use:
-   **a) T=0.0 (Healthcare needs accuracy and determinism, no randomness.)**
-   b) T=0.9
-   c) T=1.5
-   d) T=2.0
+* a) 0.0–0.2
+* b) 0.4–0.7
+* **c) 0.8–1.2 (Higher T encourages creativity and variation in storytelling.)**
+* d) >2.0
 
-10. A poetry generator should use:
-    a) 0.1
-    b) 0.5
-    **c) 0.9 (Poetry benefits from creativity and variation, which comes from higher T.)**
-    d) 0.0
+**8. What happens at very high T (>2)?**
+
+* a) Outputs coherent always
+* **b) Outputs more random, often nonsense (Very high T makes output unstable and meaningless.)**
+* c) Outputs deterministic
+* d) Output length decreases
+
+**9. A chatbot in healthcare should use:**
+
+* **a) T=0.0 (Healthcare needs accuracy and determinism, no randomness.)**
+* b) T=0.9
+* c) T=1.5
+* d) T=2.0
+
+**10. A poetry generator should use:**
+
+* a) 0.1
+* b) 0.5
+* **c) 0.9 (Poetry benefits from creativity and variation, which comes from higher T.)**
+* d) 0.0
 
 ---
+
 
 ## Examples & Applications
 
