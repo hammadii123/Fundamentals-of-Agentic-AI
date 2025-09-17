@@ -1,12 +1,12 @@
-# Temperature in Prompt Engineering 
+# Temperature in Prompt Engineering
 
 ## 1. What is Temperature?
 
 Think of temperature as a **creativity level of AI**.
 It decides how the AI picks words when it answers you.
 
-* **Low temperature (close to 0)** → AI gives safe, predictable answers.
-* **High temperature (closer to 1 or more)** → AI gives creative, surprising answers.
+- **Low temperature (close to 0)** → AI gives safe, predictable answers.
+- **High temperature (closer to 1 or more)** → AI gives creative, surprising answers.
 
 ---
 
@@ -14,10 +14,10 @@ It decides how the AI picks words when it answers you.
 
 Imagine you are choosing food at a restaurant:
 
-* **T = 0.0** → You always order the same dish (safe).
-* **T = 0.3** → You mostly order your favorite dish but sometimes try another.
-* **T = 0.7** → You try different dishes every time.
-* **T = 1.2** → You may even order something totally unexpected or weird!
+- **T = 0.0** → You always order the same dish (safe).
+- **T = 0.3** → You mostly order your favorite dish but sometimes try another.
+- **T = 0.7** → You try different dishes every time.
+- **T = 1.2** → You may even order something totally unexpected or weird!
 
 So, temperature = how adventurous you are.
 
@@ -29,19 +29,19 @@ AI doesn’t “know the answer directly.” It looks at a list of possible next
 
 Example: You type → "The cat sat on the..."
 
-* mat → 60% chance
+- mat → 60% chance
 
-* floor → 20% chance
+- floor → 20% chance
 
-* chair → 10% chance
+- chair → 10% chance
 
-* moon → 10% chance
+- moon → 10% chance
 
-* **If T = 0.1 (low):** AI almost always picks “mat.”
+- **If T = 0.1 (low):** AI almost always picks “mat.”
 
-* **If T = 1.0 (normal):** AI might pick mat, floor, or chair.
+- **If T = 1.0 (normal):** AI might pick mat, floor, or chair.
 
-* **If T = 2.0 (high):** Even “moon” could be chosen!
+- **If T = 2.0 (high):** Even “moon” could be chosen!
 
 So, temperature changes how strict or free AI is when choosing.
 
@@ -89,27 +89,27 @@ def reverse_string(s: str) -> str:
 
 **Market Relevance:**
 
-* GitHub Copilot → keeps T low for correctness.
-* Replit Ghostwriter → may use higher T for creative alternatives.
+- GitHub Copilot → keeps T low for correctness.
+- Replit Ghostwriter → may use higher T for creative alternatives.
 
 ---
 
 ### Example 2: Customer Support Bot (Banks vs E-commerce)
 
-* **Low Temperature (T=0.3):**
+- **Low Temperature (T=0.3):**
   User: “What’s my account balance?”
   AI: “Your current account balance is \$1,250.43.”
 
-* **Medium Temperature (T=0.6):**
+- **Medium Temperature (T=0.6):**
   AI: “Your account balance is \$1,250.43. Do you want me to also show your last 3 transactions?”
 
-* **High Temperature (T=1.0):**
+- **High Temperature (T=1.0):**
   AI: “Looks like your balance is \$1,250.43. Want me to share a cool saving tip too?”
 
 **Market Examples:**
 
-* Banks (JPMorgan, Citibank AI bots) → use low T.
-* E-commerce (Amazon, Shopify stores) → use medium T.
+- Banks (JPMorgan, Citibank AI bots) → use low T.
+- E-commerce (Amazon, Shopify stores) → use medium T.
 
 ---
 
@@ -137,8 +137,8 @@ print(response.choices[0].message.content)
 
 **Market Relevance:**
 
-* Coca-Cola AI marketing labs → use high T.
-* Shopify merchants → often use high T for unique product descriptions.
+- Coca-Cola AI marketing labs → use high T.
+- Shopify merchants → often use high T for unique product descriptions.
 
 ---
 
@@ -146,16 +146,16 @@ print(response.choices[0].message.content)
 
 **Input:** “Summarize today’s stock market news.”
 
-* **Low T (0.2):**
+- **Low T (0.2):**
   “Stock markets closed higher today. The S\&P 500 gained 1.2%, led by tech stocks. Investors reacted positively to the Fed’s comments on interest rates.”
 
-* **High T (1.0):**
+- **High T (1.0):**
   “Wall Street roared back today. Tech giants fueled a rally as investors cheered the Fed’s softer stance on rates.”
 
 **Market Relevance:**
 
-* Notion AI, Perplexity → low T for factual summaries.
-* Buzzfeed, Tabloid news AI → high T for catchy headlines.
+- Notion AI, Perplexity → low T for factual summaries.
+- Buzzfeed, Tabloid news AI → high T for catchy headlines.
 
 ---
 
@@ -163,10 +163,10 @@ print(response.choices[0].message.content)
 
 **User Prompt:** “The knight enters a dark forest. What happens next?”
 
-* **Low T (0.3):**
+- **Low T (0.3):**
   “The knight walks carefully through the forest. He hears the sound of birds and the rustling of leaves.”
 
-* **High T (1.2):**
+- **High T (1.2):**
   “The knight steps into the shadowy forest, only to be greeted by glowing eyes in the trees. A talking wolf whispers: ‘You are not welcome here…’”
 
 **Market Example:**
@@ -178,9 +178,9 @@ AI Dungeon uses high T to keep the story unpredictable.
 
 In **Agentic AI** (AI agents that plan, use tools, and make decisions):
 
-* **Low T Agents:** For structured tasks (coding, SQL, finance, healthcare).
-* **Medium T Agents:** For teaching, onboarding, tutoring.
-* **High T Agents:** For entertainment, marketing, creative ideation.
+- **Low T Agents:** For structured tasks (coding, SQL, finance, healthcare).
+- **Medium T Agents:** For teaching, onboarding, tutoring.
+- **High T Agents:** For entertainment, marketing, creative ideation.
 
 ---
 
@@ -188,13 +188,13 @@ In **Agentic AI** (AI agents that plan, use tools, and make decisions):
 
 **Pros**
 
-* **Low Temperature:** Safe, repeatable answers. Great for coding, math, legal writing.
-* **High Temperature:** Creative, fun, diverse answers. Good for stories, brainstorming, marketing.
+- **Low Temperature:** Safe, repeatable answers. Great for coding, math, legal writing.
+- **High Temperature:** Creative, fun, diverse answers. Good for stories, brainstorming, marketing.
 
 **Cons**
 
-* **Low Temperature:** Boring, robotic, repetitive.
-* **High Temperature:** Risky → AI may give nonsense or hallucinate. Not good for serious tasks (finance/medicine).
+- **Low Temperature:** Boring, robotic, repetitive.
+- **High Temperature:** Risky → AI may give nonsense or hallucinate. Not good for serious tasks (finance/medicine).
 
 ---
 
@@ -212,10 +212,10 @@ In **Agentic AI** (AI agents that plan, use tools, and make decisions):
 
 ## 8. Easy Daily Analogy (Spice Level in Food)
 
-* **0.0 = No spice at all** → very plain food (safe but boring).
-* **0.5 = Medium spice** → balanced (tasty and safe).
-* **1.0 = Extra spicy** → fun but can burn your mouth!
-* **2.0 = Over spicy** → chaos, too much to handle.
+- **0.0 = No spice at all** → very plain food (safe but boring).
+- **0.5 = Medium spice** → balanced (tasty and safe).
+- **1.0 = Extra spicy** → fun but can burn your mouth!
+- **2.0 = Over spicy** → chaos, too much to handle.
 
 Temperature works exactly like spice.
 
@@ -223,12 +223,13 @@ Temperature works exactly like spice.
 
 ## 9. Final Summary
 
-* Temperature = AI’s **creativity knob**.
-* **Low T** = safe, reliable but boring.
-* **High T** = creative, risky but fun.
-* Choose temperature **based on your task**.
+- Temperature = AI’s **creativity knob**.
+- **Low T** = safe, reliable but boring.
+- **High T** = creative, risky but fun.
+- Choose temperature **based on your task**.
 
 ---
+
 Perfect — I’ll create the **full README.md** with all 50 MCQs, correct answers in **bold**, and all your original bracketed explanations intact.
 
 ---
@@ -331,7 +332,7 @@ Perfect — I’ll create the **full README.md** with all 50 MCQs, correct answe
 
 15. T interacts strongly with:
     a) Tokens per second
-    **b) top\_k and top\_p (Temperature + nucleus/top-k sampling together control randomness.)**
+    **b) top_k and top_p (Temperature + nucleus/top-k sampling together control randomness.)**
     c) Training data size
     d) Prompt length
 
@@ -419,7 +420,7 @@ Perfect — I’ll create the **full README.md** with all 50 MCQs, correct answe
 29. Setting T high in production chatbots is risky.
     **True (High T can cause unsafe or random replies in production.)**
 
-30. Temperature works independently of top\_p.
+30. Temperature works independently of top_p.
     **False (Both interact in probability sampling, they aren’t independent.)**
 
 ---
