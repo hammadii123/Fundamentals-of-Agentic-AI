@@ -244,6 +244,10 @@ Perfect — I’ll polish your **README.md** so it looks clean, professional, an
 Here’s the refined version:
 
 ---
+Perfect, I’ll keep the same clean **README style** you approved, but now I’ll add a ✅ emoji to make the **correct MCQs more prominent**.
+Here’s the **full 50 MCQs** completed in that format:
+
+---
 
 # Temperature in LLMs – 50 MCQs with Answers & Explanations
 
@@ -254,27 +258,27 @@ Here’s the refined version:
 **1. Temperature in LLMs controls:**
 
 * a) Speed
-* **b) Randomness (Because temperature adjusts how randomly tokens are chosen during generation.)**
+* ✅ **b) Randomness (Because temperature adjusts how randomly tokens are chosen during generation.)**
 * c) Accuracy
 * d) Memory
 
 **2. A temperature of 0 means:**
 
 * a) Always random
-* **b) Deterministic (Because at T=0, the model always picks the highest probability token.)**
+* ✅ **b) Deterministic (Because at T=0, the model always picks the highest probability token.)**
 * c) Creative
 * d) Nonsense
 
 **3. Temperature modifies:**
 
 * a) User prompt
-* **b) Token logits (Because logits are divided by T before softmax to adjust probability spread.)**
+* ✅ **b) Token logits (Because logits are divided by T before softmax to adjust probability spread.)**
 * c) Training data
 * d) Context window
 
 **4. Which formula includes temperature?**
 
-* **a) P = exp(logit/T) / Σ exp(logit/T) (This is the softmax with temperature scaling.)**
+* ✅ **a) P = exp(logit/T) / Σ exp(logit/T) (This is the softmax with temperature scaling.)**
 * b) P = logit × T
 * c) P = logit + T
 * d) None
@@ -282,7 +286,7 @@ Here’s the refined version:
 **5. Higher temperature makes the distribution:**
 
 * a) Sharper
-* **b) Flatter (Because probabilities spread out, making rare tokens more likely.)**
+* ✅ **b) Flatter (Because probabilities spread out, making rare tokens more likely.)**
 * c) Narrower
 * d) More peaked
 
@@ -292,7 +296,7 @@ Here’s the refined version:
 
 **6. Best range for deterministic factual answers:**
 
-* **a) 0.0–0.3 (Low T keeps answers consistent and factual.)**
+* ✅ **a) 0.0–0.3 (Low T keeps answers consistent and factual.)**
 * b) 0.5–0.7
 * c) 0.8–1.0
 * d) >1.5
@@ -301,19 +305,19 @@ Here’s the refined version:
 
 * a) 0.0–0.2
 * b) 0.4–0.7
-* **c) 0.8–1.2 (Higher T encourages creativity and variation in storytelling.)**
+* ✅ **c) 0.8–1.2 (Higher T encourages creativity and variation in storytelling.)**
 * d) >2.0
 
 **8. What happens at very high T (>2)?**
 
 * a) Outputs coherent always
-* **b) Outputs more random, often nonsense (Very high T makes output unstable and meaningless.)**
+* ✅ **b) Outputs more random, often nonsense (Very high T makes output unstable and meaningless.)**
 * c) Outputs deterministic
 * d) Output length decreases
 
 **9. A chatbot in healthcare should use:**
 
-* **a) T=0.0 (Healthcare needs accuracy and determinism, no randomness.)**
+* ✅ **a) T=0.0 (Healthcare needs accuracy and determinism, no randomness.)**
 * b) T=0.9
 * c) T=1.5
 * d) T=2.0
@@ -322,245 +326,318 @@ Here’s the refined version:
 
 * a) 0.1
 * b) 0.5
-* **c) 0.9 (Poetry benefits from creativity and variation, which comes from higher T.)**
+* ✅ **c) 0.9 (Poetry benefits from creativity and variation, which comes from higher T.)**
 * d) 0.0
 
 ---
 
+## Effects on Output
 
-## Examples & Applications
+**11. Low temperature answers are:**
 
-11. With T=0, the same prompt always gives:
-    a) Different answer
-    **b) Same answer (Deterministic decoding always produces the same output.)**
-    c) No answer
-    d) Wrong answer
+* a) Creative
+* ✅ **b) Consistent (They stick to the most likely token paths.)**
+* c) Random
+* d) Chaotic
 
-12. Customer support bot using T=0.2 will sound:
-    **a) Robotic but consistent (Low T ensures stable replies but may feel less natural.)**
-    b) Very creative
-    c) Random
-    d) Angry
+**12. High temperature answers are:**
 
-13. In coding, low temperature ensures:
-    **a) Consistency (Coding requires deterministic outputs, low T avoids random bugs.)**
-    b) Hallucination
-    c) Creative bugs
-    d) None
+* a) Predictable
+* b) Always correct
+* ✅ **c) More diverse (Because probability mass spreads across multiple tokens.)**
+* d) Deterministic
 
-14. In story writing, high T ensures:
-    a) Repetition
-    b) Predictable plots
-    **c) Creative twists (Higher T introduces diversity in story elements.)**
-    d) No creativity
+**13. If a student asks a math problem, ideal T is:**
 
-15. T interacts strongly with:
-    a) Tokens per second
-    **b) top_k and top_p (Temperature + nucleus/top-k sampling together control randomness.)**
-    c) Training data size
-    d) Prompt length
+* a) 1.0
+* b) 0.8
+* ✅ **c) 0.0 (Math needs accuracy and consistency, no randomness.)**
+* d) 1.5
 
----
+**14. For brainstorming new startup ideas, best T is:**
 
-## Conceptual Depth
+* a) 0.0
+* ✅ **b) 0.9 (Higher T encourages creative idea generation.)**
+* c) 0.2
+* d) 0.5
 
-16. T=1 corresponds to:
-    **a) Original softmax (At T=1, logits are unchanged, standard softmax applies.)**
-    b) Flattened distribution
-    c) Hardmax
-    d) Deterministic
+**15. Temperature directly influences:**
 
-17. Reducing T below 1 makes distribution:
-    a) Flatter
-    **b) Sharper (Lower T exaggerates probability gaps, making model more confident.)**
-    c) Random
-    d) None
-
-18. Increasing T above 1 makes rare tokens:
-    a) Less likely
-    **b) More likely (High T flattens probabilities, boosting rare token chances.)**
-    c) Ignored
-    d) Removed
-
-19. If logits are divided by T=0.5, the differences:
-    **a) Increase (Smaller T exaggerates gaps between logits.)**
-    b) Decrease
-    c) Stay same
-    d) Vanish
-
-20. Temperature scaling is applied:
-    **a) Before softmax (Because logits are adjusted before probability normalization.)**
-    b) After sampling
-    c) On embeddings
-    d) On prompts
+* ✅ **a) Token selection probabilities (Because it reshapes the probability distribution.)**
+* b) Model weights
+* c) Context length
+* d) Training epochs
 
 ---
 
-## Real-World Scenarios
+## Comparisons
 
-21. Marketing slogan generator: best T =
-    a) 0.2
-    b) 0.6
-    **c) 1.0 (Balanced creativity and coherence is ideal for slogans.)**
-    d) 0.0
+**16. Temperature vs Top-k:**
 
-22. SQL query generator: best T =
-    **a) 0.0 (SQL requires precision and consistency, not randomness.)**
-    b) 0.5
-    c) 1.2
-    d) 2.0
+* ✅ **a) Temperature smooths probabilities, Top-k cuts them off.**
+* b) Both do the same
+* c) Top-k is always better
+* d) Temperature is about memory
 
-23. Brainstorming app: best T =
-    a) 0.2
-    **b) 0.5 (Moderate T encourages creative yet relevant ideas.)**
-    c) 0.0
-    d) 2.0
+**17. Temperature = 0.5 vs 1.0, which is more stable?**
 
-24. Joke generator:
-    a) 0.1
-    **b) 0.7 (Jokes need creativity but not total nonsense, mid T works well.)**
-    c) 0.0
-    d) 2.0
+* ✅ **a) 0.5 (Lower T → more stable answers.)**
+* b) 1.0
+* c) Both same
+* d) Cannot say
 
-25. Search engine snippet summarizer:
-    **a) 0.1 (Snippets must be concise and factual, requiring low T.)**
-    b) 0.8
-    c) 1.2
-    d) 2.0
+**18. Temperature is applied during:**
+
+* a) Training
+* ✅ **b) Inference (It changes probabilities when generating outputs, not when learning.)**
+* c) Data preprocessing
+* d) Fine-tuning
+
+**19. Which is true?**
+
+* ✅ **a) T=0 makes outputs repeatable (Because the highest probability token is always chosen.)**
+* b) T=0 makes outputs random
+* c) T=1.5 is deterministic
+* d) T doesn’t affect randomness
+
+**20. Temperature mainly impacts:**
+
+* a) Memory recall
+* ✅ **b) Creativity vs determinism (It balances novelty with reliability.)**
+* c) Context length
+* d) Latency
 
 ---
 
-## Pitfalls
+## Real-world Applications
 
-26. T=0 guarantees correctness.
-    **False (Low T reduces randomness but doesn’t prevent hallucinations.)**
+**21. News summarization requires:**
 
-27. High T always improves creativity.
-    **False (Too high T makes outputs nonsensical, not creative.)**
+* ✅ **a) Low T (Factual, concise, consistent summaries are needed.)**
+* b) High T
+* c) Medium T
+* d) Very high T
 
-28. T=0 can still hallucinate.
-    **True (Hallucinations come from model knowledge, not temperature.)**
+**22. Writing jokes needs:**
 
-29. Setting T high in production chatbots is risky.
-    **True (High T can cause unsafe or random replies in production.)**
+* a) 0.0
+* b) 0.3
+* ✅ **c) 0.9 (Humor benefits from creativity and unexpected associations.)**
+* d) 2.0
 
-30. Temperature works independently of top_p.
-    **False (Both interact in probability sampling, they aren’t independent.)**
+**23. Scientific paper Q\&A should use:**
+
+* ✅ **a) 0.0–0.2 (Ensures factual, repeatable answers.)**
+* b) 0.5
+* c) 1.0
+* d) 1.5
+
+**24. Fantasy story continuation should use:**
+
+* a) 0.1
+* b) 0.3
+* ✅ **c) 1.0 (Balanced creativity for storytelling.)**
+* d) 2.0
+
+**25. Legal document drafting needs:**
+
+* ✅ **a) 0.0 (Precision and determinism are critical in law.)**
+* b) 0.6
+* c) 1.0
+* d) 1.5
 
 ---
 
 ## Advanced
 
-31. Softmax with T=∞ → distribution is:
-    a) Sharp
-    **b) Uniform (All tokens have equal probability at infinite T.)**
-    c) Zero
-    d) Random
+**26. Increasing T > 1 does what?**
 
-32. Softmax with T→0 → distribution is:
-    a) Uniform
-    **b) Argmax (The highest probability token dominates.)**
-    c) Random
-    d) Balanced
+* a) Makes probabilities sharper
+* ✅ **b) Makes distribution flatter (Even rare tokens get more chance.)**
+* c) No effect
+* d) Increases context
 
-33. T modifies logits by:
-    a) Addition
-    **b) Division (Logits are divided by T before softmax.)**
-    c) Multiplication
-    d) Subtraction
+**27. Decreasing T < 1 does what?**
 
-34. T can be fractional (e.g., 0.7).
-    **True (Temperature accepts real values, not just integers.)**
+* ✅ **a) Sharpens probabilities (Model prefers top tokens more strongly.)**
+* b) Flattens distribution
+* c) Increases creativity
+* d) Randomizes
 
-35. T is usually set in:
-    a) Training
-    **b) Inference (It’s applied only during generation, not training.)**
-    c) Preprocessing
-    d) Embedding stage
+**28. Temperature cannot be:**
 
----
+* a) 0
+* b) 0.5
+* ✅ **c) Negative (Because dividing by negative T breaks probability logic.)**
+* d) 2.0
 
-## More Application MCQs
+**29. If model is repetitive, solution is:**
 
-36. For tool-based reasoning agents, safe T =
-    **a) 0.0–0.3 (Reasoning needs precision, not creativity.)**
-    b) 0.8–1.0
-    c) 1.5+
-    d) Any
+* a) Lower T
+* ✅ **b) Increase T (Higher T reduces repetition by adding randomness.)**
+* c) Decrease context
+* d) Restart training
 
-37. For humor generation, safe T =
-    a) 0.0
-    **b) 0.5–0.8 (Moderate T balances coherence with creativity for humor.)**
-    c) 1.5+
-    d) <0.2
+**30. If model is incoherent, solution is:**
 
-38. For medical Q\&A bot:
-    **a) T=0.0 (Accuracy and safety demand deterministic outputs.)**
-    b) T=1.0
-    c) T=1.5
-    d) T=2.0
-
-39. For rap lyric generator:
-    a) T=0.2
-    **b) T=0.9 (Rap requires creativity, rhyme, and variation.)**
-    c) T=0.0
-    d) T=2.0
-
-40. For AI judge (legal reasoning):
-    **a) T=0.0 (Legal reasoning needs strict accuracy and determinism.)**
-    b) T=0.8
-    c) T=1.5
-    d) T=1.0
+* ✅ **a) Lower T (Brings answers closer to most probable tokens.)**
+* b) Increase T
+* c) Increase context
+* d) Add memory
 
 ---
 
-## Trick & Edge Cases
+## Technical
 
-41. At T=0, the same question always yields same answer.
-    **True (Deterministic decoding gives repeatable output.)**
+**31. Temperature modifies logits before:**
 
-42. At T=1, distribution = unchanged softmax.
-    **True (Because logits are divided by 1, leaving them unchanged.)**
+* a) Training
+* ✅ **b) Softmax (Logits are divided by T before applying softmax.)**
+* c) Embedding
+* d) Attention
 
-43. At T>1, all tokens become less distinct.
-    **True (Higher T flattens probability gaps, reducing distinction.)**
+**32. With T=0.7, compared to T=0.2:**
 
-44. Temperature can fix bias in dataset.
-    **False (Bias comes from training data, not decoding strategy.)**
+* a) More deterministic
+* ✅ **b) More diverse outputs (Because probabilities are more spread out.)**
+* c) Less creative
+* d) Always longer answers
 
-45. Temperature is useful in sampling, not greedy decoding.
-    **True (Greedy decoding ignores T since it picks only the max token.)**
+**33. If two tokens have probabilities 0.8 and 0.2, at T=0:**
+
+* ✅ **a) Token with 0.8 always chosen (Deterministic maximum likelihood.)**
+* b) Token with 0.2 sometimes chosen
+* c) Random
+* d) Both chosen
+
+**34. If T=1.0, distribution is:**
+
+* ✅ **a) Original probabilities (No scaling effect at T=1.)**
+* b) Always uniform
+* c) Always sharp
+* d) Always flat
+
+**35. If T → ∞, distribution approaches:**
+
+* a) Sharp
+* ✅ **b) Uniform (All tokens equal chance, complete randomness.)**
+* c) Deterministic
+* d) Context-based
 
 ---
 
-## Last 5 (Exam Stumpers)
+## Case Studies
 
-46. Temperature is most similar to:
-    **a) Entropy control (It regulates randomness/uncertainty in output.)**
-    b) Learning rate
-    c) Epochs
-    d) Memory size
+**36. Chatbot for banking should use:**
 
-47. High T increases:
-    a) Determinism
-    **b) Variability (More tokens are considered, making outputs diverse.)**
-    c) Reliability
-    d) Safety
+* ✅ **a) Low T (Banking needs factual, precise responses.)**
+* b) High T
+* c) Very high T
+* d) Doesn’t matter
 
-48. Low T reduces:
-    a) Predictability
-    **b) Randomness (It narrows the distribution, making results stable.)**
-    c) Accuracy
-    d) Speed
+**37. Rap lyric generation should use:**
 
-49. In practice, most production agents use:
-    a) T>1
-    **b) T\~0–0.3 (Low T ensures stable, safe responses in production.)**
-    c) T=2.0
-    d) T=1.5
+* a) 0.0
+* b) 0.3
+* ✅ **c) 1.0 (Encourages rhymes, creativity, variety.)**
+* d) 2.0
 
-50. Temperature is part of:
-    a) Model training
-    **b) Decoding strategy (It’s a parameter used during output generation.)**
-    c) Embedding generation
-    d) Prompt construction
+**38. Translation task should use:**
+
+* ✅ **a) Low T (Because translation must be accurate and repeatable.)**
+* b) 0.9
+* c) 1.5
+* d) 2.0
+
+**39. Writing ad slogans should use:**
+
+* a) 0.1
+* b) 0.3
+* ✅ **c) 0.8 (Creativity needed for catchy slogans.)**
+* d) 2.0
+
+**40. Debugging code task should use:**
+
+* ✅ **a) 0.0 (Code debugging must be precise, not random.)**
+* b) 0.7
+* c) 1.0
+* d) 2.0
+
+---
+
+## Mixed Knowledge
+
+**41. Temperature affects:**
+
+* a) Model training
+* ✅ **b) Inference-time randomness**
+* c) Attention heads
+* d) Embedding size
+
+**42. Temperature can be combined with:**
+
+* ✅ **a) Top-k & Top-p sampling (They often work together to balance randomness and control.)**
+* b) Context window
+* c) Model weights
+* d) Dataset size
+
+**43. Lowering T reduces:**
+
+* a) Accuracy
+* ✅ **b) Diversity (Answers become repetitive and predictable.)**
+* c) Consistency
+* d) Coherence
+
+**44. Raising T increases:**
+
+* a) Stability
+* ✅ **b) Randomness (The model explores less probable tokens.)**
+* c) Factual accuracy
+* d) Memory size
+
+**45. In deterministic tasks, T should be:**
+
+* ✅ **a) Low (Deterministic tasks need repeatable answers.)**
+* b) High
+* c) Random
+* d) Medium
+
+---
+
+## Final
+
+**46. In brainstorming tasks, T should be:**
+
+* a) 0.0
+* b) 0.3
+* ✅ **c) High (Creativity requires randomness.)**
+* d) Negative
+
+**47. In legal advice tasks, T should be:**
+
+* ✅ **a) Low (Legal requires precision and consistency.)**
+* b) High
+* c) Medium
+* d) Infinite
+
+**48. If two runs give different answers, likely T was:**
+
+* ✅ **a) >0 (Any T above 0 introduces randomness.)**
+* b) 0
+* c) Negative
+* d) Ignored
+
+**49. Which is true about T=0?**
+
+* ✅ **a) Greedy decoding (Always picks max probability token.)**
+* b) Random sampling
+* c) Uniform distribution
+* d) No answer
+
+**50. Key takeaway:**
+
+* ✅ **a) Low T → factual & stable, High T → creative & diverse**
+* b) High T → stable, Low T → random
+* c) T has no impact
+* d) T affects training only
+
